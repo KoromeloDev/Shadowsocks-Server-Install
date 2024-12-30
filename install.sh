@@ -33,7 +33,7 @@ iptables -4 -A INPUT -p tcp --dport 8388 -m comment --comment "Shadowsocks serve
 iptables -4 -A INPUT -p udp --dport 8388 -m comment --comment "Shadowsocks server listen port" -j ACCEPT
 ufw allow proto tcp to 0.0.0.0/0 port 8388 comment "Shadowsocks server listen port"
 ufw allow proto udp to 0.0.0.0/0 port 8388 comment "Shadowsocks server listen port"
-ufw allow 8388 && ufw allow OpenSSH && ufw disable && ufw enable
+ufw allow 8388 && ufw allow OpenSSH && ufw reload
 
 # Configuring for network optimization
 echo "
