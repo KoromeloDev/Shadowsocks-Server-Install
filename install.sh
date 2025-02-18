@@ -21,8 +21,8 @@ EOF
 }
 
 # Requesting a password and method from the user
-read -p "Enter the password: " password
-read -p "Enter the method (for example, chacha20): " method
+read -pr "Enter the password: " password
+read -pr "Enter the method (for example, chacha20): " method
 
 # Сохранение данных в файл конфигурации
 write_config "$password" "$method"
